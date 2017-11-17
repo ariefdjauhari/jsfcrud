@@ -11,7 +11,7 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import java.util.HashMap;
 
-//@Startup
+@Startup
 @Singleton
 public class InitDbService {
 

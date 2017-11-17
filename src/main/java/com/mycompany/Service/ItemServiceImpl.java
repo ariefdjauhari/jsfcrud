@@ -1,7 +1,6 @@
 package com.mycompany.Service;
 
 import com.mycompany.Entity.Item;
-import com.mycompany.Entity.Users;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -17,7 +16,6 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> findAll() {
-//        return entityManager.createQuery("from Item", Item.class).getResultList();
         TypedQuery<Item> Items = entityManager.createNamedQuery("allItem", Item.class);
         return Items.getResultList();
     }
